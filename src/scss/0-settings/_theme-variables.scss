@@ -1,0 +1,122 @@
+// Theme Variables
+// Including Bootstraap Variables Overwrite
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+$black: #000000;
+$white: #ffffff;
+$gray-dark: #333333;
+
+$colors: ();
+$colors: (
+	"gray-dark": $gray-dark,
+	"white": $white,
+	"black": $black,
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $white;
+$body-color: $gray-dark;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $gray-dark;
+$link-decoration: none;
+$link-hover-color: $gray-dark;
+$link-hover-decoration: underline;
+
+// Prefix for :root CSS variables
+
+$variable-prefix: antman- !default;
+
+//Responsive Breakpoint
+$rfs-breakpoint: 1200px;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+	"Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+	"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+	"Liberation Mono", "Courier New", monospace !default;
+
+$font-family-base: $font-family-sans-serif;
+$font-family-headlines: $font-family-sans-serif;
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+
+$font-size-base: 1.25rem; // 20px;
+$font-size-lg: 1.5rem; // 24px;
+$font-size-sm: 0.875rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+
+$h1-font-size: 4rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: $font-size-base;
+
+$headings-margin-bottom: 1rem;
+$headings-font-family: null;
+$headings-font-style: null;
+$headings-font-weight: 400;
+$headings-line-height: 1.2;
+$headings-color: null;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+	xxl: 1420px,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+	xxl: 1200px,
+);
+
+// Content Width
+//
+// Define the maximum width of content Elements.
+
+$content-max-width: 920px;
+$container-max-width: 1200px;
+
+$content-padding-x: 1rem;
+
+$spacer: 1rem;
+
+// Hamburger Menu
+//
+$hamburger-padding-x: 8px;
+$hamburger-padding-y: 8px;
+$hamburger-layer-width: 32px;
+$hamburger-layer-height: 3px;
+$hamburger-layer-spacing: 8px;
+$hamburger-layer-color: $black;

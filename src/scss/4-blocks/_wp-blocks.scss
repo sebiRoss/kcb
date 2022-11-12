@@ -1,0 +1,15 @@
+.wp-block-group {
+	margin-top: clamp(5rem, 10vw, 8rem);
+
+	&.has-background {
+		padding: 1rem;
+
+		@include media-breakpoint-up(md) {
+			padding: 2rem;
+		}
+	}
+}
+
+.alignfull.has-background + .alignfull.has-background {
+	margin-top: 0;
+}

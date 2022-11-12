@@ -1,0 +1,56 @@
+/* Fonts */
+@import "0-settings/fonts";
+@import "0-settings/functions";
+@import "0-settings/theme-variables";
+@import "0-settings/mixins";
+
+@import "1-tools/root";
+
+.editor-styles-wrapper {
+	/*--------------------------------------------------------------
+	# 1-Tools
+	--------------------------------------------------------------*/
+
+	@import "1-tools/base";
+	@import "1-tools/type";
+
+	/*--------------------------------------------------------------
+	# 2-Objects
+	--------------------------------------------------------------*/
+	@import "2-objects/button";
+
+	/*--------------------------------------------------------------
+	# Blocks
+	--------------------------------------------------------------*/
+	@import "4-blocks/wp-blocks";
+	@import "4-blocks/blocks";
+
+	font-family: var(--antman-body-font-family);
+	color: var(--antman-body-color);
+	background: var(--antman-body-bg);
+	font-weight: var(--antman-body-font-weight);
+	line-height: var(--antman-body-line-height);
+	font-size: 1rem;
+
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base;
+	}
+
+	.wp-block {
+		@import "1-tools/type";
+
+		margin-left: auto;
+		margin-right: auto;
+
+		&
+			[class*="__inner-container"]
+			> *:not([data-align="wide"]):not([data-align="full"]):not(.is-style-wide):not(.content-block) {
+			max-width: var(--antman-content-width);
+			width: 100%;
+		}
+	}
+
+	.wp-block-group {
+		border: 2px dotted $black;
+	}
+}
