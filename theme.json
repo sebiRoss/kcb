@@ -5,7 +5,7 @@
 		"appearanceTools": true,
 		"border": {
 			"color": false,
-			"radius": false,
+			"radius": true,
 			"style": false,
 			"width": false
 		},
@@ -17,7 +17,13 @@
 			"defaultGradients": false,
 			"defaultPalette": false,
 			"duotone": [],
-			"gradients": [],
+			"gradients": [
+				{
+					"gradient": "linear-gradient(90.27deg, #61B59F 0.51%, rgba(97, 181, 159, 0.2) 132.97%)",
+					"slug": "green-to-light",
+					"name": "Dukelgrün dzu Hellgrün"
+				}
+			],
 			"link": true,
 			"palette": [
 				{
@@ -31,7 +37,7 @@
 					"name": "White"
 				},
 				{
-					"color": "#ff0000",
+					"color": "#FF725E",
 					"slug": "primary",
 					"name": "Primary"
 				}
@@ -52,7 +58,7 @@
 		"spacing": {
 			"blockGap": null,
 			"margin": true,
-			"padding": false,
+			"padding": true,
 			"units": ["px", "rem", "vh", "vw"],
 			"customSpacingSize": false,
 			"spacingScale": {
@@ -60,19 +66,24 @@
 			},
 			"spacingSizes": [
 				{
+					"size": "clamp(1rem, 5vw, 2rem)",
+					"slug": "20",
+					"name": "1"
+				},
+				{
 					"size": "clamp(1.5rem, 5vw, 2rem)",
 					"slug": "30",
-					"name": "1"
+					"name": "2"
 				},
 				{
 					"size": "clamp(1.8rem, 1.8rem + ((1vw - 0.48rem) * 2.885), 3rem)",
 					"slug": "40",
-					"name": "2"
+					"name": "3"
 				},
 				{
 					"size": "clamp(5rem, 10vw, 8rem)",
 					"slug": "50",
-					"name": "3"
+					"name": "4"
 				}
 			]
 		},
@@ -80,7 +91,18 @@
 			"customFontSize": false,
 			"dropCap": false,
 			"fontFamilies": [],
-			"fontSizes": [],
+			"fontSizes": [
+				{
+					"name": "Klein",
+					"size": "0.75rem",
+					"slug": "small"
+				},
+				{
+					"name": "Groß",
+					"size": "clamp(1.25rem, 0.9rem + 1.6vw, 2rem)",
+					"slug": "large"
+				}
+			],
 			"fontStyle": false,
 			"fontWeight": false,
 			"letterSpacing": false,

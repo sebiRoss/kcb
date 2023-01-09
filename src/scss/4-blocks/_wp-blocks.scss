@@ -1,15 +1,63 @@
 .wp-block-group {
-	margin-top: clamp(5rem, 10vw, 8rem);
+	margin-top: clamp(4rem, 10vw, 6rem);
 
 	&.has-background {
-		padding: 1rem;
+		padding: 3rem 1rem;
 
 		@include media-breakpoint-up(md) {
-			padding: 2rem;
+			padding: 6rem 2rem;
 		}
 	}
 }
 
 .alignfull.has-background + .alignfull.has-background {
 	margin-top: 0;
+}
+
+.wp-block-button {
+	.wp-block-button__link {
+		@extend .o-button;
+	}
+
+	&.is-style-outline .wp-block-button__link {
+		border: 2px solid;
+		border-color: $orange;
+		transition: all 0.3s ease;
+		padding: 10px 35px;
+		color: $orange !important;
+
+		&:hover,
+		&:active {
+			color: $white !important;
+			border-color: darken($orange, 20%);
+			background-color: darken($orange, 20%);
+		}
+	}
+
+	&.is-style-large-button {
+		width: 100%;
+		display: block;
+
+		@include media-breakpoint-up(md) {
+			width: auto;
+		}
+
+		.wp-block-button__link {
+			padding: 25px 40px;
+			font-size: 1.75rem;
+			width: 100%;
+			display: block;
+
+			@include media-breakpoint-up(md) {
+				padding: 25px 75px;
+				font-size: 2rem;
+				width: auto;
+			}
+		}
+	}
+}
+
+.blur-bg {
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 }

@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 @import "0-settings/fonts";
-@import "0-settings/functions";
 @import "0-settings/theme-variables";
+@import "0-settings/functions";
 @import "0-settings/mixins";
 
 /*--------------------------------------------------------------
@@ -29,6 +29,7 @@
 --------------------------------------------------------------*/
 @import "3-components/hamburger";
 @import "3-components/menu";
+@import "3-components/contact-bar";
 
 /*--------------------------------------------------------------
 # Blocks

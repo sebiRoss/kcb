@@ -1,8 +1,8 @@
 /* Alignment Classes ------------------------- */
 .site-content
 	> *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	--double-padding: calc(var(--antman-content-padding-x) * 2);
-	max-width: var(--antman-content-width);
+	--double-padding: calc(var(--kcb-content-padding-x) * 2);
+	max-width: var(--kcb-content-width);
 	width: calc(100% - var(--double-padding));
 }
 
@@ -12,13 +12,13 @@
 }
 
 .site-content > *:not(.alignfull):last-child {
-	margin-bottom: clamp(5rem, 10vw, 8rem);
+	margin-bottom: clamp(4rem, 10vw, 6rem);
 }
 
 [class*="__inner-container"]
 	> *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: var(--antman-content-width);
-	width: 100%;
+	//max-width: var(--kcb-container-width);
+	//width: 100%;
 }
 
 .alignnone,
@@ -56,8 +56,8 @@
 .alignwide,
 .container,
 .l-container {
-	--double-padding: calc(var(--antman-content-padding-x) * 2);
-	max-width: var(--antman-container-width);
+	--double-padding: calc(var(--kcb-content-padding-x) * 2);
+	max-width: var(--kcb-container-width);
 	position: relative;
 	width: calc(100% - var(--double-padding));
 	margin-left: auto;

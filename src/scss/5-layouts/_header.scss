@@ -1,8 +1,27 @@
 .l-header {
 	background-color: $white;
-	padding: 1rem 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	padding: 1.5rem 0;
 	position: relative;
+	border-top: 2px dashed #949494;
+
+	.container {
+		display: flex;
+		align-items: center;
+		position: static;
+	}
+
+	.o-home-link {
+		margin-right: 2rem;
+
+		svg path {
+			transition: fill 0.25s ease;
+		}
+
+		&:hover,
+		&:active {
+			svg path {
+				fill: $orange;
+			}
+		}
+	}
 }

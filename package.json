@@ -1,11 +1,11 @@
 {
-  "name": "antman",
-  "description": "Antman Theme",
+  "name": "kcb",
+  "description": "kcb Theme",
   "version": "1.0.0",
   "author": "denkanross",
   "repository": {
     "type": "git",
-    "url": "https://github.com/denkanross/antman"
+    "url": "https://github.com/denkanross/kcb"
   },
   "license": "MIT",
   "devDependencies": {
@@ -25,5 +25,8 @@
     "dev": "mix",
     "watch": "mix watch",
     "prod": "mix --production"
+  },
+  "dependencies": {
+    "basicscroll": "^3.0.4"
   }
 }

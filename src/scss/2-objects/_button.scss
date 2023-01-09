@@ -1,7 +1,7 @@
 .o-button {
 	display: inline-block;
-	padding: 10px 25px;
-	background-color: $black;
+	padding: 10px 35px;
+	background-color: $orange;
 	font-weight: 400;
 	color: #fff;
 	text-align: center;
@@ -13,11 +13,12 @@
 	border: none;
 	line-height: 1.2;
 	height: auto;
-	border-radius: 5px;
+	border-radius: 20px;
 
 	&:hover,
 	&:active {
-		background-color: $black;
+		background-color: darken($orange, 10%);
 		color: #fff;
+		text-decoration: none;
 	}
 }

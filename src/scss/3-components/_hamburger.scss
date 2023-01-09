@@ -1,18 +1,19 @@
 // c-hamburgerMenu
-.c-hamburger{
+.c-hamburger {
 	padding: $hamburger-padding-y $hamburger-padding-x;
 	display: inline-block;
 	cursor: pointer;
-	border:none;
+	border: none;
 	background-color: transparent;
 	margin: auto 0;
 	font-size: 0;
 	outline: none;
 
-	display:block;
+	display: block;
+	margin-left: auto;
 
-	@include media-breakpoint-up(md) {
-		display:none;
+	@include media-breakpoint-up(lg) {
+		display: none;
 	}
 
 	&:focus,
@@ -21,7 +22,6 @@
 	}
 
 	.menu-open & {
-
 		.c-hamburger-inner {
 			$y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
 
@@ -61,7 +61,6 @@
 		background-color: $hamburger-layer-color;
 		position: absolute;
 		transition-property: transform;
-
 	}
 
 	&::before,
@@ -73,8 +72,8 @@
 	&::before {
 		top: $hamburger-layer-height + $hamburger-layer-spacing;
 		transition-property: transform, opacity;
-        transition-timing-function: ease;
-        transition-duration: 0.15s;
+		transition-timing-function: ease;
+		transition-duration: 0.15s;
 	}
 
 	&::after {

@@ -59,13 +59,13 @@ img {
 // scss-docs-start reboot-body-rules
 body {
 	margin: 0; // 1
-	font-family: var(--antman-body-font-family);
-	font-size: var(--antman-body-font-size);
-	font-weight: var(--antman-body-font-weight);
-	line-height: var(--antman-body-line-height);
-	color: var(--antman-body-color);
+	font-family: var(--kcb-body-font-family);
+	font-size: var(--kcb-body-font-size);
+	font-weight: var(--kcb-body-font-weight);
+	line-height: var(--kcb-body-line-height);
+	color: var(--kcb-body-color);
 	text-align: left;
-	background-color: var(--antman-body-bg); // 2
+	background-color: var(--kcb-body-bg); // 2
 	-webkit-text-size-adjust: 100%; // 3
 	-webkit-tap-highlight-color: rgba($black, 0); // 4
 }

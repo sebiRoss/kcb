@@ -1,7 +1,7 @@
 /* Fonts */
 @import "0-settings/fonts";
-@import "0-settings/functions";
 @import "0-settings/theme-variables";
+@import "0-settings/functions";
 @import "0-settings/mixins";
 
 @import "1-tools/root";
@@ -25,11 +25,11 @@
 	@import "4-blocks/wp-blocks";
 	@import "4-blocks/blocks";
 
-	font-family: var(--antman-body-font-family);
-	color: var(--antman-body-color);
-	background: var(--antman-body-bg);
-	font-weight: var(--antman-body-font-weight);
-	line-height: var(--antman-body-line-height);
+	font-family: var(--kcb-body-font-family);
+	color: var(--kcb-body-color);
+	background: var(--kcb-body-bg);
+	font-weight: var(--kcb-body-font-weight);
+	line-height: var(--kcb-body-line-height);
 	font-size: 1rem;
 
 	@include media-breakpoint-up(md) {
@@ -45,8 +45,8 @@
 		&
 			[class*="__inner-container"]
 			> *:not([data-align="wide"]):not([data-align="full"]):not(.is-style-wide):not(.content-block) {
-			max-width: var(--antman-content-width);
-			width: 100%;
+			//max-width: var(--kcb-content-width);
+			//width: 100%;
 		}
 	}
 

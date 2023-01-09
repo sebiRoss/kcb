@@ -1,5 +1,37 @@
 .content-block {
+}
 
+.block-line {
+	--scaleX: 0;
 
+	margin: 2rem 0;
+	margin-bottom: 3rem;
 
+	.line {
+		width: 270px;
+		max-width: 100%;
+		height: 2px;
+		background-color: $black;
+		transform-origin: left center;
+		will-change: transform;
+		transform: scaleX(var(--scaleX));
+		display: block;
+	}
+
+	&.animate-in .line {
+		animation: scaleIn 1s ease forwards;
+	}
+
+	&.vertical {
+	}
+}
+
+.acf-block-preview .block-line {
+	--scaleX: 1;
+}
+
+@keyframes scaleIn {
+	100% {
+		transform: scaleX(1);
+	}
 }

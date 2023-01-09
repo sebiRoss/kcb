@@ -9,9 +9,43 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/nav.js */ "./src/js/functions/nav.js");
+/* harmony import */ var _functions_contact_bar_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/contact-bar.js */ "./src/js/functions/contact-bar.js");
+/* harmony import */ var _functions_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/nav.js */ "./src/js/functions/nav.js");
+/* harmony import */ var _functions_scroll_animations_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./functions/scroll-animations.js */ "./src/js/functions/scroll-animations.js");
 
-(0,_functions_nav_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+
+(0,_functions_nav_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_functions_scroll_animations_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_functions_contact_bar_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+/***/ }),
+
+/***/ "./src/js/functions/contact-bar.js":
+/*!*****************************************!*\
+  !*** ./src/js/functions/contact-bar.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ contactToggle)
+/* harmony export */ });
+function contactToggle() {
+  var contactBarBtns = document.querySelectorAll(".js-contact-bar-toogle");
+  var contactBar = document.querySelector(".js-contact-bar");
+  var contactBarBtnLarge = document.querySelector(".c-contact-bar__button");
+  if (contactBar != null) {
+    var contactHeight = contactBar.offsetHeight;
+    contactBarBtnLarge.style.setProperty("--btn-width", contactHeight + "px");
+    contactBarBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        contactBar.classList.toggle("is-open");
+      });
+    });
+  }
+}
 
 /***/ }),
 
@@ -35,6 +69,67 @@ function navToggle() {
   }
 }
 ;
+
+/***/ }),
+
+/***/ "./src/js/functions/scroll-animations.js":
+/*!***********************************************!*\
+  !*** ./src/js/functions/scroll-animations.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initScrollAnims)
+/* harmony export */ });
+//import * as basicScroll from "basicscroll";
+
+function initScrollAnims() {
+  var parallaxElem = document.querySelectorAll(".block-line");
+  var observer = new IntersectionObserver(isElScrolledIntoView, {
+    root: null,
+    rootMargin: "0px 0px -15% 0px",
+    threshold: 1
+  });
+  if (parallaxElem) {
+    /*
+    parallaxElem.forEach((elem) => {
+    	const scroller = basicScroll
+    		.create({
+    			elem: elem,
+    			from: "top-bottom",
+    			to: "bottom-top",
+    			direct: true,
+    			props: {
+    				"--scaleX": {
+    					from: `0.1`,
+    					to: `1`,
+    				},
+    			},
+    		})
+    		.start();
+    });*/
+    parallaxElem.forEach(function (elem) {
+      observer.observe(elem);
+    });
+  }
+
+  // create our "what to do with each observed element" function
+  function isElScrolledIntoView(entries) {
+    // again loop over all entries (element)
+    entries.forEach(function (entry) {
+      // check if the entry is intersecting at our set threshold
+      if (entry.isIntersecting) {
+        // set a class to toggle animation
+        var delay = entry.target.dataset.delay;
+        setTimeout(function () {
+          entry.target.classList.add("animate-in");
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+}
 
 /***/ }),
 
@@ -202,7 +297,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkantman"] = self["webpackChunkantman"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkkcb"] = self["webpackChunkkcb"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
